@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Multiple-module-test</groupId>
+    <groupId>com.gxwebmanager.solutions</groupId>
     <artifactId>multiplemoduletest</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
@@ -14,7 +14,7 @@
     </modules>
 
     <properties>
-        <gib.referenceBranch>refs/remotes/origin/develop</gib.referenceBranch>
+        <gib.referenceBranch>refs/heads/develop</gib.referenceBranch>
     </properties>
 
     <build>
