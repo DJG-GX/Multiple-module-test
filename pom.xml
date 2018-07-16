@@ -15,6 +15,7 @@
 
     <properties>
         <gib.referenceBranch>refs/heads/develop</gib.referenceBranch>
+        <child1.version>1.2.0</child1.version>
     </properties>
 
     <build>
