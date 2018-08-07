@@ -8,8 +8,33 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
     <artifactId>Child1</artifactId>
     <version>${child1.version}</version>
 
+    <build>
+        <plugins>
+            <!-- maven OSGi plugin -->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-Activator>com.gxwebmanager.solutions.fontysbrochureservlet.Activator</Bundle-Activator>
+                        <Bundle-Symbolic-Name>com.gxwebmanager.solutions.fontysbrochureservlet</Bundle-Symbolic-Name>
+                        <Export-Package>
+                            com.gxwebmanager.solutions.Child1.api
+                        </Export-Package>
+                        <Import-Package>
+                            com.gxwebmanager.solutions.Child1.api,
+                            javax.servlet;version="[3.0,4)",
+                            javax.servlet.http;version="[3.0,4)",
+                            *
+                        </Import-Package>
+                        <_noee>true</_noee>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
