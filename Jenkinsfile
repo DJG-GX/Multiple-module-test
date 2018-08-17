@@ -7,7 +7,7 @@ node {
 			git url: "https://github.com/DJG-GX/Multiple-module-test.git", branch: "merge"
 			git url: "https://github.com/DJG-GX/Multiple-module-test.git", branch: "master"
 			bat "git merge origin/merge"
-			bat "git push"
+			bat "git push --set-upstream origin master"
 			git url: "https://github.com/DJG-GX/Multiple-module-test.git", branch: "merge"
 		}
 	} catch (error){
