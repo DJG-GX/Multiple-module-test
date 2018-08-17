@@ -9,5 +9,7 @@ node {
 			sh "git push"
 			steps.git url: "https://github.com/DJG-GX/Multiple-module-test.git", branch: "merge"
 		}
+	} catch (error){
+		throw error
 	}
 }
