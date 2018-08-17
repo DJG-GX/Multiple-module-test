@@ -5,7 +5,7 @@ node {
 		stage ('merge master') {
 			echo "Merging feature into master"
 			git url: "https://github.com/DJG-GX/Multiple-module-test.git", branch: "master"
-			bat "git merge feature"
+			bat "git merge origin/merge"
 			bat "git push"
 			steps.git url: "https://github.com/DJG-GX/Multiple-module-test.git", branch: "merge"
 		}
