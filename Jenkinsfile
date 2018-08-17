@@ -5,9 +5,9 @@ node {
 		stage ('merge master') {
 			echo "Merging feature into master"
 			git url: "https://github.com/DJG-GX/Multiple-module-test.git", branch: "master"
-			bat "git merge feature"
+			bat "git merge origin/feature"
 			bat "git push"
-			steps.git url: "https://github.com/DJG-GX/Multiple-module-test.git", branch: "feature"
+			steps.git url: "https://github.com/DJG-GX/Multiple-module-test.git", branch: "origin/feature"
 		}
 	} catch (error){
         throw error
